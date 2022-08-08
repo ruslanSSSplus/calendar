@@ -1,0 +1,80 @@
+.all {
+    border-radius: 10px;
+    padding-right: 5px;
+    text-align: center;
+    height: 600px;
+    width: 100%;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+
+}
+.date{
+    cursor: pointer;
+    width: 100%;
+    height: 13%;
+    text-align: center;
+    font-size: 50px;
+}
+
+.allDays{
+    cursor: pointer;
+    text-align: center;
+    height: 50px;
+    width: 100%;
+    border-radius: 5px;
+}
+.selectedDay{
+    cursor: pointer;
+    text-align: center;
+    background-color: #adc6ff;
+    height: 95%;
+    width: 95%;
+    border-radius: 5px;
+}
+.allDays:hover{
+    color: #adc6ff;
+}
+
+
+.prev{
+    cursor: pointer;
+    font-size: 30px;
+}
+.next{
+    cursor: pointer;
+    font-size: 30px;
+}
+.next:hover{
+    color: grey;
+}
+.prev:hover{
+    color: grey;
+}
+.month{  display: grid;
+    grid-template-areas:
+    'm n c';
+    grid-template-columns: 1fr 3fr 1fr;
+    text-align: center;
+}
+.exactDate{
+    margin-top: 4px;
+    font-size: 25px;
+}
+.days{
+    display: grid;
+    width: 100%;
+    height: 100%;
+    font-size: 30px;
+    grid-template-areas:
+    'a a a a a a';
+}
+.page{
+    margin-top: 0;
+    text-align: center;
+    width: 90vw;
+    max-width: 740px;
+}
+.allDates{
+    font-size: 30px;
+
+    text-align: center;
+}
