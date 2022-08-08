@@ -1,10 +1,10 @@
 import React from 'react';
 
-import DatePicker from "./DataPicker/DatePicker";
+import {AllRoutes} from "./Routing/AllRoutes";
 
 
 const App = () => (
-  <DatePicker />
+  <AllRoutes />
 );
 
 export default App;
