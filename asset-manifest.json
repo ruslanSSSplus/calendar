@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/https://ruslansssplus.github.io/calendar/static/css/main.03e58583.css",
-    "main.js": "/https://ruslansssplus.github.io/calendar/static/js/main.39444808.js",
+    "main.js": "/https://ruslansssplus.github.io/calendar/static/js/main.af98364e.js",
     "index.html": "/https://ruslansssplus.github.io/calendar/index.html",
     "main.03e58583.css.map": "/https://ruslansssplus.github.io/calendar/static/css/main.03e58583.css.map",
-    "main.39444808.js.map": "/https://ruslansssplus.github.io/calendar/static/js/main.39444808.js.map"
+    "main.af98364e.js.map": "/https://ruslansssplus.github.io/calendar/static/js/main.af98364e.js.map"
   },
   "entrypoints": [
     "static/css/main.03e58583.css",
-    "static/js/main.39444808.js"
+    "static/js/main.af98364e.js"
   ]
 }
