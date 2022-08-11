@@ -81,7 +81,7 @@ export const selectThunkCreater = (year, month, day ) => {
 export const showMessageThunkCreater = (year, month, day ) => {
     return async (dispatch) => {
         dispatch(actions.showMessage(year, month, day))
-        dispatch(actions.putData(year, month,day))
+        dispatch(actions.putData(year, month-1,day))
         dispatch(actions.setSelectedDateElement(year, month,day))
     }}
 
