@@ -7,7 +7,7 @@ import {
     showMessageThunkCreater,
     selectThunkCreater,
     deleteMessageThunkCreater, getMessageThunkCreater
-} from "../Redux/Reducers/calendarReducer";
+} from "../../Redux/Actions/calendar";
 
 
 const DatePicker = () => {
@@ -19,8 +19,6 @@ const DatePicker = () => {
     const dispatch = useDispatch()
     const {date, months, selectedDay, selectedMonth, selectedYear, selected_date_element,
         allSelectedDates, message} = useSelector((state)=> state.calendar)
-
-    console.log(date.getMonth())
 
     const [year, setYear] = useState(date.getFullYear())
 
@@ -45,7 +43,6 @@ const DatePicker = () => {
 
 
     const goToNextMonth = (m, y) => {
-        console.log(m, y)
         if (m >= 11) {
             setMonth(0);
             setYear(y + 1);

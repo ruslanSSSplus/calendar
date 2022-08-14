@@ -1,5 +1,3 @@
-import {calendarAPI} from "../../API/calendarAPI";
-
 
 const PUT_DATA = 'CALENDAR/PUT_DATA';
 const SET_SELECTED_DATE_ELEMENT = 'CALENDAR/SET_SELECTED_DATE_ELEMENT';
@@ -60,49 +58,13 @@ const calendarReducer = (state = initialState, action) => {
     }
 }
 
-export const selectThunkCreater = (year, month, day ) => {
-    return async (dispatch) => {
-        dispatch(actions.putData(year, month-1,day))
-        dispatch(actions.setSelectedDateElement(year, month,day))
-        let txt =  window.prompt(`Ваша заметка на ${year}г. ${month} месяц ${day} число` )
-        console.log(!!txt)
-        if (!!txt){
-            let data = [year, month-1, day, txt]
-            let response = await calendarAPI.postMessage(data)
-            dispatch(actions.setAllSelectedDates(response))
-            dispatch(actions.showMessage(year, month,day))
-            console.log(response)
-        } else {
-            dispatch(actions.deleteMessage())
-            alert("Вы ничего не написали");
-        }
-}}
 
-export const showMessageThunkCreater = (year, month, day ) => {
-    return async (dispatch) => {
-        dispatch(actions.showMessage(year, month, day))
-        dispatch(actions.putData(year, month-1,day))
-        dispatch(actions.setSelectedDateElement(year, month,day))
-    }}
+// export const putData = (year, month,day) => ({type: PUT_DATA, year, month, day})
+// export const setSelectedDateElement = (year, month,day) => ({type: SET_SELECTED_DATE_ELEMENT, year, month,day})
+// export const setAllSelectedDates = (data) => ({type: SET_ALL_SELECTED_DATES, data})
+// export const showMessage = ( year, month, day) => ({type: SHOW_MESSAGE, year, month, day})
+// export const deleteMessage = () => ({type: DELETE_MESSAGE})
 
-
-export const deleteMessageThunkCreater = (year, month, day ) => {
-    return async (dispatch) => {
-        let data = [year, month-1, day]
-        let response = await calendarAPI.deleteMessage(data)
-        console.log(response)
-        dispatch(actions.setAllSelectedDates(response))
-        dispatch(actions.setSelectedDateElement(data[0], data[1], data[2]))
-        dispatch(actions.deleteMessage())
-
-    }}
-
-export const getMessageThunkCreater = () => {
-    return async (dispatch) => {
-        let response = await calendarAPI.getMessages()
-        console.log(response)
-        dispatch(actions.setAllSelectedDates(response))
-    }}
 export const actions = {
     putData: (year, month,day) => ({
         type: PUT_DATA, year, month, day
